@@ -1,5 +1,9 @@
 
 patch:
+
+  # 增加语言模型
+  __include: grammar:/hans
+
   engine/translators:
     - punct_translator
     - script_translator

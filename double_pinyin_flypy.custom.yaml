@@ -3,6 +3,9 @@ patch:
   # （按需选择）清空 preedit_format 中的内容，输入时显示双拼编码
   translator/preedit_format: []
 
+  # 增加语言模型
+  __include: grammar:/hans
+
   # 同时支持双拼和全拼：使用 derive 保留原始全拼拼写
   speller/algebra:
     - erase/^xx$/

@@ -8,6 +8,7 @@ ln -sf ${PWD}/lua ~/Library/Rime/
 ln -sf ${PWD}/opencc ~/Library/Rime/
 
 ln -sf ${PWD}/cn_dicts ~/Library/Rime/
+ln -sf ${PWD}/cn_dicts_cell ~/Library/Rime/
 ln -sf ${PWD}/en_dicts ~/Library/Rime/
 
 ln -sf ${PWD}/luna_pinyin.custom.yaml ~/Library/Rime/
@@ -31,3 +32,10 @@ ln -sf ${PWD}/radical_pinyin.dict.yaml ~/Library/Rime/
 
 ln -sf ${PWD}/symbols_caps_v.yaml ~/Library/Rime/
 ln -sf ${PWD}/symbols_v.yaml ~/Library/Rime/
+
+
+ln -sf ${PWD}/grammar.yaml ~/Library/Rime/
+ln -sf ${PWD}/zh-hans-t-essay-bgc.gram ~/Library/Rime/
+ln -sf ${PWD}/zh-hans-t-essay-bgw.gram ~/Library/Rime/
+ln -sf ${PWD}/zh-hant-t-essay-bgc.gram ~/Library/Rime/
+ln -sf ${PWD}/zh-hant-t-essay-bgw.gram ~/Library/Rime/

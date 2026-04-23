@@ -1,0 +1,41 @@
+# Rime dictionary
+# encoding: utf-8
+#
+---
+name: en_br_custom
+version: "2026-03-08"
+sort: by_weight
+...
+# 自用常用词库
+code .	code
+cd ..	cd
+cd	cd
+
+# vim常用快捷鍵
+jj	jj
+dw	dw
+d$	dw
+daw	daw
+dd	dd
+cw	cw
+c$	cw
+caw	caw
+yy	yy
+p	p
+P	P
+o	o
+O	O
+gg	gg
+G	G
+bn	bn
+bp	bp
+
+# vim command
+:%s/[ \t]\+$//	vims
+
+# dev
+apikey	apikey
+API KEY	APIKEY
+superpowers superpowers
+openclaw openclaw
+aoneclaw aoneclaw
