@@ -1,0 +1,14 @@
+# default.custom.yaml
+
+patch:
+  switcher/hotkeys:
+    - F4
+  schema_list:
+    - schema: luna_pinyin
+    - schema: double_pinyin_flypy
+    - schema: rime_ice
+  menu/page_size: 9  # 候选词数量
+  preserve_context: false
+  ascii_mode: true        # 默认进入应用时为英文模式
+  full_shape: false
+  simplification: true

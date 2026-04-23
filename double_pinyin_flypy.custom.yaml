@@ -1,0 +1,94 @@
+# 这是小鹤的补丁，其他双拼将文件名前面那部分改成对应方案 ID 就可以了
+patch:
+  # （按需选择）清空 preedit_format 中的内容，输入时显示双拼编码
+  translator/preedit_format: []
+
+  # 同时支持双拼和全拼：使用 derive 保留原始全拼拼写
+  speller/algebra:
+    - erase/^xx$/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe])([ioun])$/$1$1$2/
+    - derive/^([aoe])(ng)?$/$1$1$2/
+    # 以下使用 derive 而非 xform，同时支持全拼和双拼
+    - derive/iu$/Q/
+    - derive/(.)ei$/$1W/
+    - derive/uan$/R/
+    - derive/[uv]e$/T/
+    - derive/un$/Y/
+    - derive/^sh/U/
+    - derive/^ch/I/
+    - derive/^zh/V/
+    - derive/uo$/O/
+    - derive/ie$/P/
+    - derive/(.)i?ong$/$1S/
+    - derive/ing$/K/
+    - derive/uai$/K/
+    - derive/(.)ai$/$1D/
+    - derive/(.)en$/$1F/
+    - derive/(.)eng$/$1G/
+    - derive/[iu]ang$/L/
+    - derive/(.)ang$/$1H/
+    - derive/ian$/M/
+    - derive/(.)an$/$1J/
+    - derive/(.)ou$/$1Z/
+    - derive/[iu]a$/X/
+    - derive/iao$/N/
+    - derive/(.)ao$/$1C/
+    - derive/ui$/V/
+    - derive/in$/B/
+    - xlit/QWRTYUIOPASDFGHJKLZXCVBNM/qwrtyuiopasdfghjklzxcvbnm/
+
+  engine/translators:
+    - punct_translator
+    - script_translator
+    - lua_translator@*br_datetime        # 简易日期时间 (d/t)
+    - lua_translator@*date_translator    # 时间、日期、星期
+    - lua_translator@*lunar              # 农历
+    - lua_translator@*uuid               # UUID
+    - table_translator@custom_phrase     # 自定义短语 custom_phrase_double.txt
+    - table_translator@melt_eng          # 英文输入
+    - table_translator@cn_en             # 中英混合词汇
+    - table_translator@radical_lookup    # 部件拆字反查
+    - lua_translator@*unicode            # Unicode
+    - lua_translator@*number_translator  # 数字、金额大写
+    - lua_translator@*calc_translator    # 计算器
+    - lua_translator@*force_gc           # 暴力 GC
+
+  # Lua 配置: 简易日期时间的触发关键字
+  br_datetime:
+    date: d   # 日期
+    time: t   # 时间
+
+  punctuator/half_shape:
+    ',' : { commit: '，' }
+    '.' : { commit: '。' }
+    '<' : [ 《, 〈, «, ‹ ]
+    '>' : [ 》, 〉, », › ]
+    '/' : [ 、, '/', ／, ÷ ]
+    '?' : { commit: '？' }
+    ';' : { commit: '；' }
+    ':' : { commit: '：' }
+    '''' : { pair: [ '‘', '’' ] }
+    '"' : { pair: [ '“', '”' ] }
+    '\' : [ 、, '\', ＼ ]
+    '|' : [ ·, '|', ｜, '§', '¦' ]
+    '`' : '`'
+    '~' : [ '~', ～ ]
+    '!' : { commit: '！' }
+    '@' : '@'
+    '#' : '#'
+    '%' : [ '%', ％, '°', '℃' ]
+    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
+    '^' : [ ^, …… ]
+    '&' : '&'
+    '*' : [ '*', ＊, ·, ・, ×, ※, ❂ ]
+    '(' : '（'
+    ')' : '）'
+    '-' : '-'
+    '_' : ["_", "——", "⸺"]
+    '+' : '+'
+    '=' : '='
+    '[' : [ "[", 【, 「, 〔, ［ ]
+    ']' : [ "]", 】, 」, 〕, ］ ]
+    '{' : [ 『, 〖, ｛ ]
+    '}' : [ 』, 〗, ｝ ]
