@@ -11,6 +11,12 @@ code .	code
 cd ..	cd
 cd	cd
 
+# custom shortkey
+ggs	ggs
+ggdf	ggdf
+ggdfc	ggdfc
+ggc	ggc
+
 # vim常用快捷鍵
 jj	jj
 dw	dw
