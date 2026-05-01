@@ -17,6 +17,12 @@ ggdf	ggdf
 ggdfc	ggdfc
 ggc	ggc
 
+bos download -b	bos
+bos redownload -b	bos
+
+claude --dangerously-skip-permissions	claude
+claude --permission-mode acceptEdits --allowedTools "Read,Write,Edit,Bash,Git,Npm,Pip"	claude
+
 # vim常用快捷鍵
 jj	jj
 dw	dw
@@ -45,3 +51,7 @@ API KEY	APIKEY
 superpowers superpowers
 openclaw openclaw
 aoneclaw aoneclaw
+
+# AI
+AGENTS.md	agentsmd
+CLAUDE.md	claudemd
