@@ -13,9 +13,15 @@ cd	cd
 
 # custom shortkey
 ggs	ggs
+git status	gitstatus
 ggdf	ggdf
 ggdfc	ggdfc
 ggc	ggc
+git commit	gitcommit
+git log	gitlog
+git log -p	gitlogp
+git log --stat	gitlogstat
+git ll	gitll
 
 bos download -b	bos
 bos redownload -b	bos
