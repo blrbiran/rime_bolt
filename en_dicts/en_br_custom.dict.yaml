@@ -18,6 +18,8 @@ ggdf	ggdf
 ggdfc	ggdfc
 ggc	ggc
 git commit	gitcommit
+git push	gitpush
+git pull	gitpull
 git log	gitlog
 git log -p	gitlogp
 git log --stat	gitlogstat
@@ -26,10 +28,9 @@ git ll	gitll
 bos download -b	bos
 bos redownload -b	bos
 
-claude --dangerously-skip-permissions	claude
-claude --permission-mode acceptEdits --allowedTools "Read,Write,Edit,Bash,Git,Npm,Pip"	claude
+tmux a	tmuxa
 
-# vim常用快捷鍵
+# vim shortkey
 jj	jj
 dw	dw
 d$	dw
@@ -61,3 +62,8 @@ aoneclaw aoneclaw
 # AI
 AGENTS.md	agentsmd
 CLAUDE.md	claudemd
+SKILL.md	skillmd
+
+# AI shortkey
+claude --dangerously-skip-permissions	claude
+claude --permission-mode acceptEdits --allowedTools "Read,Write,Edit,Bash,Git,Npm,Pip"	claude
