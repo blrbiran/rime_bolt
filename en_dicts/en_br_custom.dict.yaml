@@ -53,6 +53,9 @@ bp	bp
 :%s/[ \t]\+$//	vims
 
 # dev
+markdown	md
+markdown	markdown
+markdown	mdown
 apikey	apikey
 API KEY	APIKEY
 superpowers superpowers

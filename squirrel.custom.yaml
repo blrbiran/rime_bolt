@@ -1,4 +1,7 @@
 patch:
+  app_options/com.microsoft.VSCode:
+    ascii_mode: true
+    vim_mode: true
   style:
     # 选择皮肤，亮色与暗色主题
     color_scheme: mint_light_green
