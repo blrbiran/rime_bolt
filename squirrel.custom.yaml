@@ -1,5 +1,11 @@
 patch:
+  # How to get bundle id
+  # 1. osascript -e 'id of app "Safari"'
+  # 2. mdls -raw -name kMDItemCFBundleIdentifier /Applications/Safari.app
   app_options/com.microsoft.VSCode:
+    ascii_mode: true
+    vim_mode: true
+  app_options/com.cmuxterm.app:
     ascii_mode: true
     vim_mode: true
   style:
